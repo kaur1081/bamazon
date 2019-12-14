@@ -71,20 +71,18 @@ function addInventory(inventory) {
         validate: function (value) {
             return !isNaN(value);
         }
-
     }]);
-
-    .then(function (value) {
-        var choiceId = parseInt(value.choice);
-        var product = checkInventory(choiceId, inventory);
-        if (product) {
-            productQuantity(product);
-        } else {
-            console.log("this is not an item in the list")
-            loadMenu();
-        }
-    });
-}
+//     .then(function(value) {
+//      var choiceId = parseInt(value.choice);
+//         var product = checkInventory(choiceId, inventory);
+//         if (product) {
+//             productQuantity(product);
+//         } else {
+//             console.log("this is not an item in the list")
+//             loadMenu();
+//         }
+//     });
+// }
 
 function productQuantity(product) {
     inquirer.prompt([{
@@ -111,5 +109,5 @@ function addQuantity(product, quantity) {
             console.log("\nSuccessfully added " + quantity + " " + product.product_name + " 's! \n");
             loadMenu();
         }
-    );
-}
+)};
+    }
