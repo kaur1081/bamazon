@@ -72,42 +72,33 @@ function addInventory(inventory) {
             return !isNaN(value);
         }
     }]);
-//     .then(function(value) {
-//      var choiceId = parseInt(value.choice);
-//         var product = checkInventory(choiceId, inventory);
-//         if (product) {
-//             productQuantity(product);
-//         } else {
-//             console.log("this is not an item in the list")
-//             loadMenu();
-//         }
-//     });
-// }
 
-function productQuantity(product) {
-    inquirer.prompt([{
-            type: "input",
-            name: "quantity",
-            message: "How many would you like to add?",
-            validate: function (value) {
-                return value > 0;
-            }
-        }])
 
-        .then(function (value) {
-            var quantity = parseInt(value.quantity);
-            addQuantity(product, quantity);
+    function productQuantity(product) {
+        inquirer.prompt([{
+                type: "input",
+                name: "quantity",
+                message: "How many would you like to add?",
+                validate: function (value) {
+                    return value > 0;
+                }
+            }])
 
-        });
-}
+            .then(function (value) {
+                var quantity = parseInt(value.quantity);
+                addQuantity(product, quantity);
 
-function addQuantity(product, quantity) {
-    connection.query(
-        "UPDATE products  SET stock_quantity =? WHERE item_id = ?",
-        [product.stock_quantity + quantity, product.item_id],
-        function (err, res) {
-            console.log("\nSuccessfully added " + quantity + " " + product.product_name + " 's! \n");
-            loadMenu();
-        }
-)};
+            });
     }
+
+    function addQuantity(product, quantity) {
+        connection.query(
+            "UPDATE products  SET stock_quantity =? WHERE item_id = ?",
+            [product.stock_quantity + quantity, product.item_id],
+            function (err, res) {
+                console.log("\nSuccessfully added " + quantity + " " + product.product_name + " 's! \n");
+                loadMenu();
+            }
+        )
+    };
+}
