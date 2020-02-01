@@ -3,9 +3,9 @@
 
 ## Overview
 
-In this project we made Node applications bamazonCustomers.js and bamazonManager.js.
+In this project we apply Node applications in  bamazonCustomers.js and bamazonManager.js files.
 Used inquirer, MySql.
-This project is useful as it helps to look for inventory at bamazon with Include the ids, names, and prices of products for sale.
+This project is  a useful as it helps to look for inventory at bamazon with Include the ids, names, and prices of products for sale.
 We can select and quit.
 It will update inventory show whats available.
 This project is useful in a store where you can buy, track and add inventories.
