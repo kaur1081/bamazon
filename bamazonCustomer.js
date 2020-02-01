@@ -5,8 +5,8 @@ var connection = mysql.createConnection({
   host: "localhost",
   port: 3306,
   user: "root",
-  password:"Harkirat02",
-  database:"bamazon"
+  password: "Harkirat02",
+  database: "bamazon"
 });
 
 connection.connect(function (err) {
@@ -53,7 +53,6 @@ var userSelection = function (res) {
               return true;
             } else {
               return false;
-
             }
           }
         }).then(function (answer) {
