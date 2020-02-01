@@ -62,7 +62,7 @@ var userSelection = function (res) {
               afterConnection();
             })
           } else {
-            console.log("opps we dont have it");
+            console.log("Opps we dont have it");
             userSelection(res);
           }
         })
