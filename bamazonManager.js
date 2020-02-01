@@ -67,7 +67,7 @@ function addInventory(inventory) {
     inquirer.prompt([{
         type: "input",
         name: "choice",
-        message: "would you like to add more item to the inventory?",
+        message: "Would you like to add more item to the inventory?",
         validate: function (value) {
             return !isNaN(value);
         }
