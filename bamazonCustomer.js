@@ -47,7 +47,7 @@ var userSelection = function (res) {
         inquirer.prompt({
           type: 'input',
           name: 'quantity',
-          message: "how much  would you like to buy?",
+          message: "How much  would you like to buy?",
           validate: function (value) {
             if (isNaN(value) === false) {
               return true;
