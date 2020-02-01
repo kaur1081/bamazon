@@ -44,7 +44,7 @@ function productForSale(menu) {
                     addInventory();
                     break;
                 default:
-                    console.log("all done!");
+                    console.log("All done!");
                     process.exit(0);
                     break;
 
