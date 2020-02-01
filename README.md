@@ -1,4 +1,4 @@
-# bamazon
+# Bamazon
 !(https://kaur1081.github.io/bamazon/)
 
 ## Overview
