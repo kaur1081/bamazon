@@ -27,7 +27,7 @@ function productForSale(menu) {
     inquirer.prompt({
             type: "list",
             name: "choice",
-            message: "would you like to view product list?",
+            message: "Would you like to view product list?",
             choices: ["view products for sale", "low inventory", "add inventory", "add a new product", "quit"]
         })
         .then(function (value) {
